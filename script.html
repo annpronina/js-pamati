@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM un lietotāja ievade</h1>
+    <input type="text" id="attributeInput">
+    <button onclick="findAttribute()">Submit</button>
+    <p id="output"></p>
+    <script>
+
+        const car = {
+            model: "Golf",
+            year: 2020,
+            color: "black",
+            brand: "Volkswagen",
+            owner: "Anna"
+        };
+
+        function findAttribute() {
+            const attribute = document.getElementById("attributeInput").value();
+            const paragraph = document.getElementById("output");
+            const value = car[attribute];
+
+            if (value !== undefined) {
+                paragraph.textContent = value;
+            } else {
+                paragraph.textContent = "Tāds atribūts nav!";
+            }
+        }
+    </script>
+</body>
+
+</html>
